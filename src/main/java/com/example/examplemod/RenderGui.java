@@ -1,4 +1,4 @@
-package com.example.examplemod;
+/*package com.example.examplemod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -33,3 +33,4 @@ public class RenderGui() {
 
 }
 
+*/

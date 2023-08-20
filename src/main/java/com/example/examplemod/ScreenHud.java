@@ -14,7 +14,9 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class ScreenHud extends Screen {
 
-    protected ScreenHud(Component Hud){
+    Component Hud;
+
+    public ScreenHud(Component Hud){
         super(Hud);
 
     }
@@ -23,7 +25,6 @@ public class ScreenHud extends Screen {
     public void render(GuiGraphics Graphics, int mouseX, int mouseY, float partialTicks){
         super.render(Graphics, mouseX, mouseY, partialTicks);
 
-        //GuiGraphics GuiGraphics = new GuiGraphics(Stack);
 
     }
 
@@ -31,8 +32,17 @@ public class ScreenHud extends Screen {
 
     protected void Init(){
         super.init();
-        this.addRenderableOnly(new EditBox(font, 10, 10, 20, 20, ));
+        this.addRenderableOnly(new EditBox(font, 10, 10, 20, 20, Hud));
 
     }
+
+    public void Tick(){
+        super.tick();
+        EditBox FPSDisplay = new EditBox(font, 10, 10, 20, 20, Hud);
+
+        FPSDisplay.tick();
+        //this.tick();
+    }
+
 
 }
