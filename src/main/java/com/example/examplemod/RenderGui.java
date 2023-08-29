@@ -34,7 +34,7 @@ public class RenderGui() {
         if(Mc.options.renderDebug){
             return;
         }
-        Settings.ClientSettings
+        Settings.ClientSettings Setting = Settings.CLIENT_SETTINGS;
 
 
     }
